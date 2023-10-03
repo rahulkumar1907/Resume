@@ -66,46 +66,64 @@ div.add-cont-icon i:hover {
 
 /* summary */
 /* Style the container div */
-/* Style the container div */
+/* Summary section styling */
+/* Default styles for div.Summary */
 div.Summary {
     background-color: #f9f9f9;
     background-image: url('white2.jpg');
     background-size: cover;
-    
     color: #333;
     height: 100px;
-  
     padding: 20px;
     display: flex;
     font-style: italic;
-    
-} 
+    align-items: center;
+}
 
-/* Style the summary text */
+/* Default styles for div.Summary text */
 div.Summary p {
     font-style: italic;
     font-size: 12px;
     line-height: 1.5;
     padding-left: 30px;
+    overflow-y: auto; /* Add vertical scrollbar for overflow text */
+    max-height: 100px; /* Set a maximum height for the scrollbar */
 }
 
-/* Style the heading */
+/* Default styles for div.Summary heading */
 div.Summary h1 {
     font-size: 18px;
-    /* Adjust the font size as needed */
     margin-bottom: 10px;
-    /* Add spacing below the heading */
     color: #333;
-    /* Change the heading text color */
+    transition: color 0.3s, transform 0.3s;
 }
 
-div.Summary p:hover {
-    transition: transform 0.3s;
-    transform: scale(0.9);
+/* Hover effect for div.Summary heading */
+div.Summary h1:hover {
+    color: #00bcd4;
+    transform: scale(1.05);
 }
 
-/* experience skill */
-/* Overall style for the container */
+/* Media query for mobile devices (max-width: 767px) */
+@media (max-width: 767px) {
+    /* Adjust styles for mobile here */
+    div.Summary {
+        padding: 10px; /* Decrease padding for smaller screens */
+    }
+
+    div.Summary p {
+        font-size: 10px; /* Decrease font size for smaller screens */
+        padding-left: 10px; /* Adjust padding for smaller screens */
+    }
+
+    div.Summary h1 {
+        font-size: 16px; /* Decrease font size for smaller screens */
+        margin-bottom: 5px; /* Adjust margin for smaller screens */
+    }
+}
+
+
+/* Experience and Skill section container styling */
 .exp-skill {
     padding: 20px;
     background-color: #fff;
@@ -116,33 +134,7 @@ div.Summary p:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the section header */
-
-.exp-skill h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-    position: relative;
-    animation: moveText1 4s linear infinite alternate;
-    /* Use CSS animation */
-}
-
-@keyframes moveText1 {
-    0% {
-        transform: translateX(0);
-        /* Start position: no translation */
-    }
-
-    100% {
-        transform: translateX(100px);
-        /* End position: move 10px to the right */
-    }
-}
-
-
-
-/* Style for each individual experience */
+/* Individual experience styling */
 .experience {
     margin-bottom: 20px;
     padding: 20px;
@@ -151,117 +143,89 @@ div.Summary p:hover {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the company name */
+/* Company name styling */
 .experience h3 {
     font-size: 12px;
     margin-bottom: 10px;
     color: #333;
 }
 
-/* Style for links within the company name */
+/* Company name link styling */
 .experience h3 a {
     text-decoration: none;
-    /* Remove underline */
     color: #00bcd4;
-    /* Blue color for links */
     margin-left: 100px;
-    /* Add spacing between links */
     font-size: 15px;
     font-style: italic;
     font-weight: bold;
-    /* Make links bold */
 }
 
-/* Style for the position and date */
+/* Position and date styling */
 .experience p {
     font-size: 10px;
     margin-bottom: 10px;
     color: #555;
 }
 
-/* Style for the <span> elements within the experience */
+/* Individual experience details styling */
 .experience span {
     font-weight: bold;
     color: #333;
-    /* Change text color */
     font-size: 15px;
-    /* Adjust font size */
     text-decoration: none;
 }
 
-
-/* Style for the list items */
+/* List items styling */
 .experience ul {
     font-style: italic;
     font-size: 12px;
-    /* Italicize the text */
     line-height: 1.5;
-    /* Set the line height for readability */
     padding-left: 100px;
     margin-left: 50px;
 }
 
+/* List items hover effect */
 .experience ul:hover {
     transition: transform 0.5s;
-    transform: scale(1.1)
+    transform: scale(1.1);
 }
-/* Style for links within the list items */
+
+/* List item links styling */
 .experience ul a {
     text-decoration: none;
-    /* Remove underline */
     color: #333;
-    /* Blue color for links */
     margin-right: 5px;
-    /* Add spacing between links */
     font-size: 15px;
     font-style: italic;
     font-weight: bold;
-    /* Make links bold */
 }
 
-/* Hover effect for links */
+/* Company name link hover effect */
 .experience h3 a:hover {
-    color: rgba(14, 14, 238, 0.896); ;
+    color: rgba(14, 14, 238, 0.896);
     transition: transform 0.3s;
-    transform: scale(1.2)
+    transform: scale(1.2);
 }
 
-/* .experience ul a:hover {
-    color: rgb(56, 214, 8);
-    transition: transform 0.3s;
-    transform: scale(1.2)
-} */
-
-/* Style for the education section */
+/* Education section styling */
 .education {
     padding: 20px;
-    background-color:  #fff;
+    background-color: #fff;
     background-image: url('white2.jpg');
     background-size: cover;
     border-radius: 10px;
     margin: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
-    /* Add a transform transition */
 }
 
-.education:hover {
-    transform: scale(1.02);
-    /* Scale up the section on hover */
-}
-
-.exp-skill:hover {
-    transform: scale(1.02);
-    /* Scale up the section on hover */
-}
-
+/* Education section heading styling */
 .education h2 {
-    font-size: 15px;
+    font-size: 28px;
     margin-bottom: 10px;
     color: #333;
-    text-align: center;
 }
 
+/* Education entry styling */
 .education-entry {
     margin-bottom: 10px;
     padding: 10px;
@@ -274,57 +238,29 @@ div.Summary p:hover {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Education entry heading styling */
 .education-entry h3 {
     font-size: 15px;
     margin-bottom: 10px;
     color: #333;
-    transition: color 0.3s;
-    /* Add a color transition on hover */
+    transition: color 0.3s, transform 0.3s;
 }
 
+/* Education entry heading hover effect */
+.education-entry:hover h3 {
+    transition: transform 0.3s;
+    transform: scale(0.9);
+    color: #333;
+}
+
+/* Education entry details styling */
 .education-entry p {
     font-size: 10px;
     margin-bottom: 10px;
     color: #333;
 }
-.education-entry:hover h3 {
-    transition: transform 0.3s;
-    transform: scale(0.9);
-    color:#333;
-}
 
-.education-entry p:hover {
-    transition: transform 0.3s;
-    transform: scale(0.9);
-    color: #333;
-}
-
-.education h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-    position: relative;
-    animation: moveTexts 4s linear infinite alternate;
-    /* Use CSS animation */
-}
-
-@keyframes moveTexts {
-    0% {
-        transform: translateX(0);
-        /* Start position: no translation */
-    }
-
-    100% {
-        transform: translateX(100px);
-        /* End position: move 10px to the right */
-    }
-}
-
-
-/* skill */
-/* Style for the skills section *//* Style for the skills section */
-/* Style for the skills section */
+/* Skill section container styling */
 .skill {
     padding: 20px;
     background-color: #f9f9f9;
@@ -333,21 +269,9 @@ div.Summary p:hover {
     border-radius: 10px;
     margin: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
 }
 
-.skill:hover {
-    transform: scale(1.02);
-}
-
-.skill h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-}
-
-/* Style for the skills list */
+/* Skills list styling */
 .skills-list {
     list-style-type: none;
     display: flex;
@@ -356,8 +280,9 @@ div.Summary p:hover {
     padding: 0;
 }
 
+/* Individual skill item styling */
 .skills-list li {
-    flex-basis: calc(20% - 20px); /* Seven skills in one line */
+    flex-basis: calc(20% - 20px); /* Five skills in one line */
     margin-bottom: 10px;
     padding: 5px;
     background-color: #00bcd4;
@@ -366,79 +291,90 @@ div.Summary p:hover {
     font-size: 15px;
     color: #fff;
     text-align: center;
-    display: flex; /* Add this line */
-    justify-content: center; /* Add this line */
-    align-items: center; /* Add this line */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Skill item hover effect */
 .skills-list li:hover {
     transition: transform 0.5s;
     transform: scale(0.7);
     background-color: #333;
 }
 
-.skill h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-    position: relative;
-    animation: moveText2 4s linear infinite alternate;
-    /* Use CSS animation */
-}
-
-@keyframes moveText2 {
-    0% {
-        transform: translateX(0);
-        /* Start position: no translation */
-    }
-
-    100% {
-        transform: translateX(100px);
-        /* End position: move 10px to the right */
-    }
-}
-
-
-/* footer */
-/* Style for the footer */
-/* Footer section */
-/* Footer section */
+/* Footer styling */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 10px; /* Reduce padding for a smaller height */
+    padding: 10px;
     text-align: center;
 }
 
+/* Contact and social media headings */
 .contact h3, .social h3 {
     font-size: 18px;
     margin-bottom: 10px;
 }
 
+/* Contact info and social media text */
 .contact p, .social ul {
     font-size: 14px;
     margin: 5px 0;
 }
 
+/* Social media list */
 .social ul {
     list-style: none;
     padding: 0;
 }
 
+/* Social media item styling */
 .social li {
     font-size: 14px;
     margin: 5px 0;
 }
 
+/* Social media link styling */
 .social a {
     text-decoration: none;
     color: #fff;
     transition: color 0.3s;
 }
 
+/* Social media link hover effect */
 .social a:hover {
-    color: #00bcd4; /* Change color on hover */
+    color: #00bcd4;
 }
 
+/* Media Query for mobile devices */
+@media screen and (max-width: 768px) {
+    header.navbar {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+
+    header.navbar .Name h1 {
+        margin-top: 10px;
+    }
+
+    div.add-cont-icon {
+        flex-direction: row;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    div.add-cont-icon i {
+        margin-right: 20px;
+    }
+
+    div.profile-photo img {
+        margin: 0 auto;
+    }
+
+    .skills-list li {
+        flex-basis: calc(33.33% - 20px); /* Three skills in one line on mobile */
+    }
+}
 
